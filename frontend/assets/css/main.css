@@ -29,6 +29,21 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+ /* Blinking cursor animation */
+ .blinking-cursor {
+	animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0; }
+  }
+
+.features .certlogos img {
+    width: 160px; /* Set your desired width */
+    height: auto; /* Automatically adjust the height to maintain proportions */
+}
+
 body {
 	line-height: 1;
 }
@@ -103,7 +118,10 @@ input, select, textarea {
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		/* background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%); */
+		/* bleu-vert-marron */ background-image: url("images/overlay.png"), linear-gradient(45deg, #605C3C, #16222A);
+		/* violet-fonce-clair background-image: url(images/overlay.png), linear-gradient(45deg, #cbb4d4, #20002c); */
+		/* background-image: url(images/overlay.png), linear-gradient(45deg, #44a08d, #20002c); */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2859,6 +2877,30 @@ input, select, textarea {
 
 		}
 
+		ul.actions.special.linkedin {
+			-moz-justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+			-ms-justify-content: flex-start;
+			justify-content: flex-start;
+			width: 100%;
+			margin-left: 0;
+		}
+
+#pdf {
+	width: 110%;
+	height: 975px;
+
+}
+
+#pdf-container {
+	display: flex;
+	justify-content: center; /* Horizontal centering */
+	align-items: center; /* Vertical centering */
+	min-height: 80vh;
+	overflow: auto; /* Enable scrolling within the container */
+  }
+  
+
 /* Statistics */
 
 	.statistics {
@@ -2884,23 +2926,23 @@ input, select, textarea {
 		}
 
 			.statistics li.style1 {
-				background-color: #efa8b0;
+				background-color: #C0BFB4;
 			}
 
 			.statistics li.style2 {
-				background-color: #c79cc8;
+				background-color: #999C96;
 			}
 
 			.statistics li.style3 {
-				background-color: #a89cc8;
+				background-color: #727979;
 			}
 
 			.statistics li.style4 {
-				background-color: #9bb2e1;
+				background-color: #4A565B;
 			}
 
 			.statistics li.style5 {
-				background-color: #8cc9f0;
+				background-color: #23333D;
 			}
 
 			.statistics li strong, .statistics li b {
@@ -3549,7 +3591,7 @@ input, select, textarea {
 			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-image: linear-gradient(90deg, #605C3C, #16222A);
 		}
 
 		#main table tbody tr {
@@ -3558,6 +3600,16 @@ input, select, textarea {
 
 			#main table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(222, 222, 222, 0.25);
+			}
+		
+			header.major001 h2 {
+				font-size: 2em;
+				
+			}
+
+			header.major001 p {
+				font-size: 1.25em;
+				letter-spacing: -0.025em;
 			}
 
 		#main table th {
